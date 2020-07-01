@@ -1,0 +1,56 @@
+.comicList{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comics{
+  background-color: #FFEE2F;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 5px;
+  margin: 30px 0 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.comicTitle{
+  text-align: center;
+  font-size: 30px;
+}
+
+.comicImg{
+  margin: 0 0 40px 0;
+}
+
+.score{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 30px 0;
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+.score button{
+  color: gray;
+  text-decoration: none;
+  width: 100%;
+  max-width: 100px;
+  font-size: 30px;
+  border: none;
+  background-color: #FFEE2F;
+}
+
+.score > button:hover ~ button {
+	color: orange;
+}
+
+.idComic{
+  display: none;
+}

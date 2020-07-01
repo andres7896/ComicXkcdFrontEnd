@@ -1,0 +1,20 @@
+<section class="comicList">
+  <div class="comics">
+    <div class="comicTitle">
+      <h1>{{ comics.title }}</h1>
+    </div>
+    <div class="comicImg">
+      <img src="{{ comics.img }}" alt="{{ comics.alt }}" />
+    </div>
+    <div class="form-group">
+        <input type="text" name="idComic" id="idComic" class="idComic" [(ngModel)]="comics.num">
+        <div class="score" (click)="saveScore()">
+          <button value="1" [(ngModel)]="comics.scores">&#9733;</button>
+          <button value="2" [(ngModel)]="comics.scores">&#9733;</button>
+          <button value="3" [(ngModel)]="comics.scores">&#9733;</button>
+          <button value="4" [(ngModel)]="comics.scores">&#9733;</button>
+          <button value="5" #saveComic="ngModel" [(ngModel)]="comic.scores">&#9733;</button>
+        </div>
+    </div>
+  </div>
+</section>
