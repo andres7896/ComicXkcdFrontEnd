@@ -17,7 +17,7 @@ export class ComicService {
   }
 
   sendScore(QComic: Comic){
-    let options = { headers: new HttpHeaders({ "Content-Type": "application/json" })};
-    return this.http.post(`${this.backURL}/create`, QComic, options).pipe(res => res);
+    console.log(QComic)
+    return this.http.post(`${this.backURL}/create`, QComic).pipe(res => res);
   }
 }

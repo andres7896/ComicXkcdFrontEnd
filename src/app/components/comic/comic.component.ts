@@ -9,11 +9,11 @@ import { ComicService } from '../../services/comic.service';
 })
 export class ComicComponent implements OnInit {
 
-  public comics: Comic;
-  public QComics: any = {
+  comics: Comic;
+  qComic: any = {
     num: '',
     score: ''
-  };
+  }
 
   constructor(private comicService: ComicService){}
 
@@ -26,7 +26,6 @@ export class ComicComponent implements OnInit {
       if (res != null) {
         console.log('Mostrando comic!');
         this.comics = res;
-        console.log(res.num);
       } else {
         console.log('Error al traer el comic');
       }
@@ -34,11 +33,18 @@ export class ComicComponent implements OnInit {
   }
 
   saveScore(){
-    this.comicService.sendScore(this.QComics).subscribe( (res: any) => {
-      if (res.statusCode === 200) {
-        console.log('Se agrego el Comic correctamente');
-      } else {
-        console.log('Error al agregar el comic');
+    this.comicService.sendScore(this.qComic).subscribe( (res: any) => {
+      console.log(this.qComic);
+      switch (res.statusCode) {
+        case 500:
+          console.log('Error del Servidor');
+          break;
+        case 200:
+          console.log('Se agrego el Comic exitosamente');
+          break;
+        default:
+          console.log('Error al agregar el Comic');
+          break;
       }
     })
   }

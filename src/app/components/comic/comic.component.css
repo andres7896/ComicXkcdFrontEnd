@@ -1,3 +1,5 @@
+
+
 .comicList{
   display: flex;
   justify-content: center;
@@ -5,7 +7,7 @@
 }
 
 .comics{
-  background-color: #FFEE2F;
+  background-color:#BFBFBF;
   width: 100%;
   max-width: 800px;
   border-radius: 5px;
@@ -44,7 +46,8 @@
   max-width: 100px;
   font-size: 30px;
   border: none;
-  background-color: #FFEE2F;
+  background-color: #BFBFBF;
+  border: none;
 }
 
 .score > button:hover ~ button {
